@@ -1,0 +1,162 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Web Developer Checklist — Logo",
+    "goal": "Logo tối giản cho tiện ích trình duyệt. Giữ tinh thần dev </✓>. Xuất PNG nền trong suốt."
+  },
+  "style_guide": {
+    "palette": {
+      "navy": "#213044",
+      "navy_alt": "#24364C",
+      "green": "#12C48B",
+      "green_alt": "#10B981",
+      "white": "#FFFFFF",
+      "black": "#000000"
+    },
+    "rules": [
+      "Logo phẳng (flat), không gradient, không đổ bóng, không glow.",
+      "Các góc đều bo tròn đồng bộ (roundness).",
+      "Giữ nền trong suốt (transparent) cho tất cả kích thước."
+    ]
+  },
+  "icon": {
+    "concept": "Biểu tượng </✓> - closing tag với check. Dấu < / > màu navy, dấu ✓ màu xanh. Cùng hàng, cùng cấp. Ý nghĩa: 'đóng thẻ code và kiểm tra đạt'.",
+    "artboard": {
+      "shape": "square",
+      "size_ref": 1024,
+      "safe_area": "12.5% (padding đều bốn phía)",
+      "background": "transparent"
+    },
+    "geometry": {
+      "left_bracket": {
+        "glyph": "<",
+        "type": "chevron-left",
+        "stroke": "filled",
+        "thickness": "13% của cạnh icon",
+        "roundness": "10% radius tại đầu mũi",
+        "height": "65% chiều cao artboard",
+        "color": "navy",
+        "position": "trái nhất trong nhóm 4 ký tự"
+      },
+      "slash": {
+        "glyph": "/",
+        "weight": "12% của cạnh icon",
+        "angle": "20° nghiêng phải (chuẩn /)",
+        "height": "68% chiều cao artboard",
+        "cap": "round",
+        "color": "navy",
+        "position": "ngay sau left_bracket, khoảng cách 3%"
+      },
+      "right_bracket": {
+        "glyph": ">",
+        "type": "chevron-right",
+        "stroke": "filled",
+        "thickness": "13% của cạnh icon",
+        "roundness": "10% radius tại đầu mũi",
+        "height": "65% chiều cao artboard",
+        "color": "navy",
+        "position": "ngay sau slash, khoảng cách 3%"
+      },
+      "check": {
+        "glyph": "✓",
+        "style": "geometric",
+        "thickness": "12% của cạnh icon",
+        "arm_ratio": "short:long = 1:2.3",
+        "roundness": "cap round",
+        "height": "68% chiều cao artboard",
+        "color": "green",
+        "position": "ngay sau right_bracket, khoảng cách 5% (hơi xa hơn để tách biệt)"
+      }
+    },
+    "layout": {
+      "arrangement": "horizontal_inline",
+      "sequence": [
+        "left_bracket (<)",
+        "slash (/)",
+        "right_bracket (>)",
+        "check (✓)"
+      ],
+      "alignment": "căn giữa theo baseline, căn giữa theo trục dọc artboard",
+      "spacing": {
+        "between_brackets_and_slash": "3% artboard",
+        "between_bracket_and_check": "5% artboard (để phân tách rõ)"
+      },
+      "optical_adjustments": [
+        "Dịch toàn bộ nhóm 4 ký tự lên 1% để cân bằng thị giác.",
+        "Check ✓ có thể hơi to hơn 2-3% để nổi bật."
+      ]
+    },
+    "colors": {
+      "left_bracket": "navy",
+      "slash": "navy",
+      "right_bracket": "navy",
+      "check": "green",
+      "fallback_dark_bg": {
+        "left_bracket": "white",
+        "slash": "white",
+        "right_bracket": "white",
+        "check": "green_alt"
+      }
+    },
+    "effects": "none",
+    "constraints": {
+      "min_legible_size_px": 16,
+      "stroke_scales_with_size": true,
+      "no_overlap_between_slash_and_check": true,
+      "keep_absolute_clear_space": ">= 8% quanh icon"
+    },
+    "export": {
+      "filetype": [
+        "png"
+      ],
+      "transparent": true,
+      "sizes_px": [
+        16,
+        19,
+        32,
+        38,
+        48,
+        64,
+        96,
+        128,
+        256,
+        512,
+        1024
+      ],
+      "naming": "wdc-logo-{size}.png"
+    },
+    "variants": [
+      {
+        "id": "default",
+        "desc": "Nền trong suốt, bracket navy, slash+check green."
+      },
+      {
+        "id": "mono-dark",
+        "desc": "Toàn trắng cho nền tối."
+      },
+      {
+        "id": "mono-light",
+        "desc": "Toàn đen cho in ấn một màu."
+      }
+    ],
+    "accessibility": {
+      "contrast_goal": "Slash+check green nổi bật trên hầu hết nền sáng tối.",
+      "shape_redundancy": "Có thể nhận diện bằng hình dạng kể cả khi in đen trắng."
+    },
+    "do_dont": {
+      "do": [
+        "Giữ thứ tự: < / > ✓ (cùng hàng, cùng cấp).",
+        "Giữ tỉ lệ, độ dày đồng bộ giữa các ký tự.",
+        "Bo góc đồng nhất cho brackets.",
+        "Khoảng cách đều giữa < / >, hơi xa hơn trước ✓."
+      ],
+      "dont": [
+        "Không dùng gradient, glow hoặc bóng đổ.",
+        "Không xếp chồng các ký tự lên nhau.",
+        "Không thay đổi thứ tự </✓>.",
+        "Không làm check nhỏ hơn brackets."
+      ]
+    },
+    "legal_notes": "Thiết kế mới, không sao chép logo cụ thể nào. Chỉ lấy cảm hứng từ ký hiệu chung của lĩnh vực lập trình."
+  }
+}

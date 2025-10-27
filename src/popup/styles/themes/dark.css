@@ -1,0 +1,35 @@
+/* Dark Theme - Based on original extension */
+[data-theme='dark'] {
+  /* Background colors */
+  --color-bg-primary: #262d3d;
+  --color-bg-secondary: #455065;
+  --color-bg-tertiary: #373c48;
+  --color-bg-hover: #525970;
+
+  /* Text colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #c4c6ca;
+  --color-text-tertiary: #9ca3af;
+
+  /* Brand colors */
+  --color-primary: #204ecf;
+  --color-primary-hover: #1a3fa8;
+
+  /* Status colors */
+  --color-success: #00cc83;
+  --color-success-bg: rgba(0, 204, 131, 0.1);
+  --color-error: #d42551;
+  --color-error-bg: rgba(212, 37, 81, 0.1);
+  --color-warning: #e59c01;
+  --color-warning-bg: rgba(229, 156, 1, 0.1);
+  --color-info: #25a9ef;
+  --color-info-bg: rgba(37, 169, 239, 0.1);
+
+  /* Border colors */
+  --color-border: #525970;
+  --color-border-light: #3d4453;
+
+  /* Progress bar */
+  --color-progress-fill: #e59c01;
+  --color-progress-bg: #373c48;
+}

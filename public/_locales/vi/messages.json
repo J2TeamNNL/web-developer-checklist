@@ -1,0 +1,206 @@
+{
+  "extensionName": {
+    "message": "Danh Sách Kiểm Tra Web Developer",
+    "description": "Tên của extension"
+  },
+  "extensionDescription": {
+    "message": "Phân tích website để kiểm tra vi phạm best practices - SEO, Mobile, Accessibility, Performance & hơn thế nữa",
+    "description": "Mô tả của extension"
+  },
+  "commandDescription": {
+    "message": "Mở Danh Sách Kiểm Tra Web Developer",
+    "description": "Mô tả phím tắt"
+  },
+  "header_title": {
+    "message": "Danh Sách Kiểm Tra Web Developer",
+    "description": "Tiêu đề header"
+  },
+  "progress_checks_passed": {
+    "message": "Kiểm tra đạt:",
+    "description": "Text thanh tiến độ"
+  },
+  "footer_more_info": {
+    "message": "Thông tin và hỗ trợ",
+    "description": "Text link footer"
+  },
+  "button_refresh": {
+    "message": "Làm mới",
+    "description": "Nút làm mới"
+  },
+  "button_export": {
+    "message": "Xuất",
+    "description": "Nút xuất"
+  },
+  "theme_light": {
+    "message": "Chế Độ Sáng",
+    "description": "Theme sáng"
+  },
+  "theme_dark": {
+    "message": "Chế Độ Tối",
+    "description": "Theme tối"
+  },
+  "theme_auto": {
+    "message": "Chế Độ Tự Động",
+    "description": "Theme tự động (theo hệ thống)"
+  },
+  "category_seo": {
+    "message": "SEO",
+    "description": "Danh mục SEO"
+  },
+  "category_mobile": {
+    "message": "Di Động",
+    "description": "Danh mục di động"
+  },
+  "category_usability": {
+    "message": "Khả Năng Sử Dụng",
+    "description": "Danh mục khả năng sử dụng"
+  },
+  "category_accessibility": {
+    "message": "Khả Năng Truy Cập",
+    "description": "Danh mục truy cập"
+  },
+  "category_social": {
+    "message": "Mạng Xã Hội",
+    "description": "Danh mục mạng xã hội"
+  },
+  "category_performance": {
+    "message": "Hiệu Năng",
+    "description": "Danh mục hiệu năng"
+  },
+  "category_security": {
+    "message": "Bảo Mật",
+    "description": "Danh mục bảo mật"
+  },
+  "category_analytics": {
+    "message": "Phân Tích",
+    "description": "Danh mục phân tích"
+  },
+  "check_structured_data": {
+    "message": "Dữ Liệu Có Cấu Trúc cho Google Search",
+    "description": "Kiểm tra dữ liệu có cấu trúc"
+  },
+  "check_meta_description": {
+    "message": "Meta description",
+    "description": "Kiểm tra meta description"
+  },
+  "check_canonical_url": {
+    "message": "Canonical URL",
+    "description": "Kiểm tra canonical URL"
+  },
+  "check_robots_meta": {
+    "message": "Thẻ meta robots",
+    "description": "Kiểm tra thẻ meta robots"
+  },
+  "check_page_title": {
+    "message": "Tiêu đề trang",
+    "description": "Kiểm tra tiêu đề trang"
+  },
+  "check_headings_hierarchy": {
+    "message": "Cấp bậc tiêu đề",
+    "description": "Kiểm tra cấp bậc tiêu đề"
+  },
+  "check_robots_txt": {
+    "message": "Website có file robots.txt",
+    "description": "Kiểm tra robots.txt"
+  },
+  "check_viewport": {
+    "message": "Thẻ meta viewport",
+    "description": "Kiểm tra viewport"
+  },
+  "check_media_queries": {
+    "message": "CSS Media Queries",
+    "description": "Kiểm tra media queries"
+  },
+  "check_touch_target_size": {
+    "message": "Kích thước vùng chạm",
+    "description": "Kiểm tra kích thước vùng chạm"
+  },
+  "check_text_readability": {
+    "message": "Khả năng đọc chữ trên mobile",
+    "description": "Kiểm tra khả năng đọc chữ"
+  },
+  "check_favicon": {
+    "message": "Favicon",
+    "description": "Kiểm tra favicon"
+  },
+  "check_friendly_urls": {
+    "message": "Sử dụng URL thân thiện",
+    "description": "Kiểm tra friendly URLs"
+  },
+  "check_html_validation": {
+    "message": "Xác thực HTML",
+    "description": "Kiểm tra HTML validation"
+  },
+  "check_landmarks": {
+    "message": "WAI-ARIA Landmarks",
+    "description": "Kiểm tra landmarks"
+  },
+  "check_aria_roles": {
+    "message": "Vai Trò và Nhãn ARIA",
+    "description": "Kiểm tra vai trò ARIA"
+  },
+  "check_form_labels": {
+    "message": "Nhãn Biểu Mẫu",
+    "description": "Kiểm tra nhãn biểu mẫu"
+  },
+  "check_color_contrast": {
+    "message": "Tương Phản Màu Sắc",
+    "description": "Kiểm tra tương phản màu sắc"
+  },
+  "check_image_alt": {
+    "message": "Sử dụng thuộc tính 'alt' trên hình ảnh",
+    "description": "Kiểm tra alt của image"
+  },
+  "check_opengraph": {
+    "message": "Giao Thức OpenGraph",
+    "description": "Kiểm tra OpenGraph"
+  },
+  "check_ios_integration": {
+    "message": "Tích Hợp Apple iOS",
+    "description": "Kiểm tra tích hợp iOS"
+  },
+  "check_dom_size": {
+    "message": "Số lượng phần tử DOM",
+    "description": "Kiểm tra kích thước DOM"
+  },
+  "check_image_optimization": {
+    "message": "Tối ưu hóa hình ảnh (lazy loading)",
+    "description": "Kiểm tra tối ưu hóa hình ảnh"
+  },
+  "check_fonts_loading": {
+    "message": "Chiến lược tải font chữ",
+    "description": "Kiểm tra tải font chữ"
+  },
+  "check_resource_hints": {
+    "message": "Gợi ý tài nguyên (preload, prefetch)",
+    "description": "Kiểm tra gợi ý tài nguyên"
+  },
+  "check_https": {
+    "message": "Sử Dụng HTTPS",
+    "description": "Kiểm tra HTTPS"
+  },
+  "check_google_analytics": {
+    "message": "Google Analytics",
+    "description": "Kiểm tra Google Analytics"
+  },
+  "check_google_tag_manager": {
+    "message": "Google Tag Manager",
+    "description": "Kiểm tra Google Tag Manager"
+  },
+  "check_facebook_pixel": {
+    "message": "Facebook Pixel",
+    "description": "Kiểm tra Facebook Pixel"
+  },
+  "status_loading": {
+    "message": "Đang tải...",
+    "description": "Trạng thái đang tải"
+  },
+  "status_error": {
+    "message": "Lỗi kiểm tra",
+    "description": "Trạng thái lỗi"
+  },
+  "learn_more": {
+    "message": "Tìm hiểu thêm",
+    "description": "Link tìm hiểu thêm"
+  }
+}

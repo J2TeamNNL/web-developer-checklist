@@ -1,0 +1,206 @@
+{
+  "extensionName": {
+    "message": "Web Developer Checklist",
+    "description": "Name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Analyze websites for best practices violations - SEO, Mobile, Accessibility, Performance & more",
+    "description": "Description of the extension"
+  },
+  "commandDescription": {
+    "message": "Open Web Developer Checklist",
+    "description": "Description of the keyboard shortcut command"
+  },
+  "header_title": {
+    "message": "Web Developer Checklist",
+    "description": "Header title"
+  },
+  "progress_checks_passed": {
+    "message": "Checks passed:",
+    "description": "Progress bar text"
+  },
+  "footer_more_info": {
+    "message": "More info and help",
+    "description": "Footer link text"
+  },
+  "button_refresh": {
+    "message": "Refresh",
+    "description": "Refresh button"
+  },
+  "button_export": {
+    "message": "Export",
+    "description": "Export button"
+  },
+  "theme_light": {
+    "message": "Light Mode",
+    "description": "Light theme"
+  },
+  "theme_dark": {
+    "message": "Dark Mode",
+    "description": "Dark theme"
+  },
+  "theme_auto": {
+    "message": "Auto Mode",
+    "description": "Auto theme (system)"
+  },
+  "category_seo": {
+    "message": "SEO",
+    "description": "SEO category"
+  },
+  "category_mobile": {
+    "message": "Mobile",
+    "description": "Mobile category"
+  },
+  "category_usability": {
+    "message": "Usability",
+    "description": "Usability category"
+  },
+  "category_accessibility": {
+    "message": "Accessibility",
+    "description": "Accessibility category"
+  },
+  "category_social": {
+    "message": "Social Media",
+    "description": "Social Media category"
+  },
+  "category_performance": {
+    "message": "Performance",
+    "description": "Performance category"
+  },
+  "category_security": {
+    "message": "Security",
+    "description": "Security category"
+  },
+  "category_analytics": {
+    "message": "Analytics",
+    "description": "Analytics category"
+  },
+  "check_structured_data": {
+    "message": "Structured Data for Google Search",
+    "description": "Structured data check"
+  },
+  "check_meta_description": {
+    "message": "Meta description",
+    "description": "Meta description check"
+  },
+  "check_canonical_url": {
+    "message": "Canonical URL",
+    "description": "Canonical URL check"
+  },
+  "check_robots_meta": {
+    "message": "Robots meta tag",
+    "description": "Robots meta tag check"
+  },
+  "check_page_title": {
+    "message": "Page title",
+    "description": "Page title check"
+  },
+  "check_headings_hierarchy": {
+    "message": "Headings hierarchy",
+    "description": "Headings hierarchy check"
+  },
+  "check_robots_txt": {
+    "message": "Website has a robots.txt file",
+    "description": "Robots.txt check"
+  },
+  "check_viewport": {
+    "message": "Viewport meta tag",
+    "description": "Viewport check"
+  },
+  "check_media_queries": {
+    "message": "CSS Media Queries",
+    "description": "Media queries check"
+  },
+  "check_touch_target_size": {
+    "message": "Touch target size",
+    "description": "Touch target size check"
+  },
+  "check_text_readability": {
+    "message": "Text readability on mobile",
+    "description": "Text readability check"
+  },
+  "check_favicon": {
+    "message": "Favicon",
+    "description": "Favicon check"
+  },
+  "check_friendly_urls": {
+    "message": "Use friendly URLs",
+    "description": "Friendly URLs check"
+  },
+  "check_html_validation": {
+    "message": "HTML validation",
+    "description": "HTML validation check"
+  },
+  "check_landmarks": {
+    "message": "WAI-ARIA Landmarks",
+    "description": "Landmarks check"
+  },
+  "check_aria_roles": {
+    "message": "ARIA Roles and Labels",
+    "description": "ARIA roles check"
+  },
+  "check_form_labels": {
+    "message": "Form Labels",
+    "description": "Form labels check"
+  },
+  "check_color_contrast": {
+    "message": "Color Contrast",
+    "description": "Color contrast check"
+  },
+  "check_image_alt": {
+    "message": "Use 'alt' attributes on images",
+    "description": "Image alt check"
+  },
+  "check_opengraph": {
+    "message": "OpenGraph Protocol",
+    "description": "OpenGraph check"
+  },
+  "check_ios_integration": {
+    "message": "Apple iOS",
+    "description": "iOS integration check"
+  },
+  "check_dom_size": {
+    "message": "Number of DOM elements",
+    "description": "DOM size check"
+  },
+  "check_image_optimization": {
+    "message": "Image optimization (lazy loading)",
+    "description": "Image optimization check"
+  },
+  "check_fonts_loading": {
+    "message": "Fonts loading strategy",
+    "description": "Fonts loading check"
+  },
+  "check_resource_hints": {
+    "message": "Resource hints (preload, prefetch)",
+    "description": "Resource hints check"
+  },
+  "check_https": {
+    "message": "HTTPS Usage",
+    "description": "HTTPS check"
+  },
+  "check_google_analytics": {
+    "message": "Google Analytics",
+    "description": "Google Analytics check"
+  },
+  "check_google_tag_manager": {
+    "message": "Google Tag Manager",
+    "description": "Google Tag Manager check"
+  },
+  "check_facebook_pixel": {
+    "message": "Facebook Pixel",
+    "description": "Facebook Pixel check"
+  },
+  "status_loading": {
+    "message": "Loading...",
+    "description": "Loading state"
+  },
+  "status_error": {
+    "message": "Error checking",
+    "description": "Error state"
+  },
+  "learn_more": {
+    "message": "Learn more",
+    "description": "Learn more link"
+  }
+}

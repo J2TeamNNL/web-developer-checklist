@@ -1,0 +1,35 @@
+/* Light Theme */
+[data-theme='light'] {
+  /* Background colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f3f4f6;
+  --color-bg-tertiary: #e5e7eb;
+  --color-bg-hover: #d1d5db;
+
+  /* Text colors */
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #6b7280;
+
+  /* Brand colors */
+  --color-primary: #204ecf;
+  --color-primary-hover: #1a3fa8;
+
+  /* Status colors */
+  --color-success: #10b981;
+  --color-success-bg: rgba(16, 185, 129, 0.1);
+  --color-error: #ef4444;
+  --color-error-bg: rgba(239, 68, 68, 0.1);
+  --color-warning: #f59e0b;
+  --color-warning-bg: rgba(245, 158, 11, 0.1);
+  --color-info: #3b82f6;
+  --color-info-bg: rgba(59, 130, 246, 0.1);
+
+  /* Border colors */
+  --color-border: #d1d5db;
+  --color-border-light: #e5e7eb;
+
+  /* Progress bar */
+  --color-progress-fill: #f59e0b;
+  --color-progress-bg: #e5e7eb;
+}
