@@ -1,6 +1,6 @@
 {
   "name": "web-developer-checklist",
-  "version": "3.0.0",
+  "version": "3.2.1",
   "description": "Modern Chrome Extension to analyze websites for best practices violations",
   "type": "module",
   "scripts": {
@@ -15,16 +15,17 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "clsx": "^2.0.0",
+    "i18next": "^23.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.0",
-    "i18next": "^23.7.0",
-    "zustand": "^4.4.7",
-    "clsx": "^2.0.0"
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.21",
     "@types/chrome": "^0.0.253",
+    "@types/node": "^24.9.2",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",

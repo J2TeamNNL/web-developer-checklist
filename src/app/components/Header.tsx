@@ -12,11 +12,14 @@ export function Header() {
         <h1 className="header-title">{t('header_title')}</h1>
         <button
           className="theme-toggle"
-          onClick={toggleTheme}
-          title={theme === 'dark' ? t('theme_light') : t('theme_dark')}
+          onClick={() => {
+            console.log('🎨 [User] Theme toggle clicked, current:', theme);
+            toggleTheme();
+          }}
+          title={theme === 'dark' ? 'Switch to Light' : 'Switch to Dark'}
           aria-label="Toggle theme"
         >
-          {theme === 'dark' ? '☀️' : '🌙'}
+          {theme === 'dark' || theme === 'auto' ? '☀️' : '🌙'}
         </button>
       </div>
     </header>

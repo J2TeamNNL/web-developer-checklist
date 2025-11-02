@@ -201,6 +201,82 @@
   },
   "learn_more": {
     "message": "Tìm hiểu thêm",
-    "description": "Link tìm hiểu thêm"
+    "description": "Learn more link"
+  },
+  "category_quality": {
+    "message": "Chất Lượng Code",
+    "description": "Danh mục chất lượng code"
+  },
+  "category_privacy": {
+    "message": "Quyền Riêng Tư",
+    "description": "Danh mục quyền riêng tư"
+  },
+  "check_xml_sitemap": {
+    "message": "XML Sitemap",
+    "description": "Kiểm tra XML Sitemap"
+  },
+  "check_twitter_cards": {
+    "message": "Twitter Cards",
+    "description": "Kiểm tra Twitter Cards"
+  },
+  "check_hreflang": {
+    "message": "Thẻ Hreflang",
+    "description": "Kiểm tra thẻ hreflang"
+  },
+  "check_csp": {
+    "message": "Content Security Policy",
+    "description": "Kiểm tra CSP"
+  },
+  "check_mixed_content": {
+    "message": "Nội Dung Hỗn Hợp",
+    "description": "Kiểm tra mixed content"
+  },
+  "check_console_errors": {
+    "message": "Lỗi JavaScript",
+    "description": "Kiểm tra lỗi console"
+  },
+  "check_broken_links": {
+    "message": "Liên Kết Lỗi",
+    "description": "Kiểm tra liên kết lỗi"
+  },
+  "check_cookie_consent": {
+    "message": "Đồng Ý Cookie (GDPR)",
+    "description": "Kiểm tra đồng ý cookie"
+  },
+  "check_privacy_policy": {
+    "message": "Chính Sách Bảo Mật",
+    "description": "Kiểm tra chính sách bảo mật"
+  },
+  "language_switcher": {
+    "message": "Ngôn ngữ",
+    "description": "Chuyển ngôn ngữ"
+  },
+  "filter_all": {
+    "message": "Tất cả",
+    "description": "Hiển thị tất cả"
+  },
+  "filter_incomplete": {
+    "message": "Chưa hoàn thành",
+    "description": "Chỉ hiển thị chưa hoàn thành"
+  },
+  "export_button": {
+    "message": "Xuất danh sách",
+    "description": "Nút xuất"
+  },
+  "copy_button": {
+    "message": "Copy vào clipboard",
+    "description": "Nút copy"
+  },
+  "toast_copied": {
+    "message": "Đã copy vào clipboard!",
+    "description": "Thông báo đã copy"
+  },
+  "toast_language_changed": {
+    "message": "Đã đổi ngôn ngữ",
+    "description": "Thông báo đổi ngôn ngữ"
+  },
+  "toast_filter_toggled": {
+    "message": "Đã thay đổi bộ lọc",
+    "description": "Thông báo đổi filter"
   }
 }

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
-  "version": "3.0.0",
+  "version": "3.2.1",
   "description": "__MSG_extensionDescription__",
   "default_locale": "vi",
   "icons": {
@@ -11,7 +11,6 @@
     "128": "icons/icon-128.png"
   },
   "action": {
-    "default_popup": "src/popup/index.html",
     "default_icon": {
       "16": "icons/icon-16.png",
       "32": "icons/icon-32.png",
@@ -24,6 +23,13 @@
     "service_worker": "src/background/index.ts",
     "type": "module"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content/index.ts"],
+      "run_at": "document_idle"
+    }
+  ],
   "permissions": [
     "activeTab",
     "scripting",

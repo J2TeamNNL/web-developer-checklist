@@ -47,6 +47,18 @@ export const CATEGORIES = {
     icon: '📊',
     color: '#16a085',
   },
+  QUALITY: {
+    id: 'quality',
+    name: 'category_quality',
+    icon: '🧩',
+    color: '#2ecc71',
+  },
+  PRIVACY: {
+    id: 'privacy',
+    name: 'category_privacy',
+    icon: '🔐',
+    color: '#8e44ad',
+  },
 } as const;
 
 export type CategoryId = keyof typeof CATEGORIES;

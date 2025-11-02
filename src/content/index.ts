@@ -30,6 +30,19 @@ import { checkHTTPS } from '@/shared/rules/security/https';
 import { checkGoogleAnalytics } from '@/shared/rules/analytics/googleAnalytics';
 import { checkGoogleTagManager } from '@/shared/rules/analytics/googleTagManager';
 import { checkFacebookPixel } from '@/shared/rules/analytics/facebookPixel';
+// v3.1 - New Security checks
+import { checkCSP } from '@/shared/rules/security/csp';
+import { checkMixedContent } from '@/shared/rules/security/mixedContent';
+// v3.1 - New SEO checks
+import { checkXMLSitemap } from '@/shared/rules/seo/xmlSitemap';
+import { checkTwitterCards } from '@/shared/rules/seo/twitterCards';
+import { checkHreflang } from '@/shared/rules/seo/hreflang';
+// v3.1 - New Quality checks
+import { checkConsoleErrors } from '@/shared/rules/quality/consoleErrors';
+import { checkBrokenLinks } from '@/shared/rules/quality/brokenLinks';
+// v3.1 - New Privacy checks
+import { checkCookieConsent } from '@/shared/rules/privacy/cookieConsent';
+import { checkPrivacyPolicy } from '@/shared/rules/privacy/privacyPolicy';
 
 async function runAllChecks(): Promise<CheckResults> {
   logger.info('Starting checks...', { url: window.location.href }, 'content-script');
@@ -58,7 +71,7 @@ async function runAllChecks(): Promise<CheckResults> {
   });
 
   const checks: CheckResult[] = [];
-  const totalChecks = 27;
+  const totalChecks = 36; // v3.1: 27 + 9 new checks
   let completedChecks = 0;
 
   // Helper to update progress
@@ -101,6 +114,14 @@ async function runAllChecks(): Promise<CheckResults> {
     
     updateProgress('Headings Hierarchy');
     checks.push(await checkHeadingsHierarchy());
+    
+    // v3.1 - Additional SEO checks (3)
+    updateProgress('XML Sitemap');
+    checks.push(await checkXMLSitemap());
+    updateProgress('Twitter Cards');
+    checks.push(await checkTwitterCards());
+    updateProgress('Hreflang Tags');
+    checks.push(await checkHreflang());
     
     // Mobile checks (4)
     logger.info('📱 Starting Mobile checks...', {}, 'content-script');
@@ -151,10 +172,14 @@ async function runAllChecks(): Promise<CheckResults> {
     updateProgress('Resource Hints');
     checks.push(await checkResourceHints());
     
-    // Security checks (1)
+    // Security checks (3)
     logger.info('🔒 Starting Security checks...', {}, 'content-script');
     updateProgress('HTTPS');
     checks.push(await checkHTTPS());
+    updateProgress('CSP Headers');
+    checks.push(await checkCSP());
+    updateProgress('Mixed Content');
+    checks.push(await checkMixedContent());
     
     // Analytics checks (3)
     logger.info('📊 Starting Analytics checks...', {}, 'content-script');
@@ -164,6 +189,20 @@ async function runAllChecks(): Promise<CheckResults> {
     checks.push(await checkGoogleTagManager());
     updateProgress('Facebook Pixel');
     checks.push(await checkFacebookPixel());
+    
+    // v3.1 - Code Quality checks (2)
+    logger.info('🧩 Starting Code Quality checks...', {}, 'content-script');
+    updateProgress('Console Errors');
+    checks.push(await checkConsoleErrors());
+    updateProgress('Broken Links');
+    checks.push(await checkBrokenLinks());
+    
+    // v3.1 - Privacy checks (2)
+    logger.info('🔐 Starting Privacy checks...', {}, 'content-script');
+    updateProgress('Cookie Consent');
+    checks.push(await checkCookieConsent());
+    updateProgress('Privacy Policy');
+    checks.push(await checkPrivacyPolicy());
   } catch (error) {
     logger.error('Error running checks', error, 'content-script');
     console.error('Error running checks:', error);
@@ -199,13 +238,16 @@ async function runAllChecks(): Promise<CheckResults> {
 
 function getCategoryForCheck(checkId: string): string {
   const categoryMap: Record<string, string> = {
-    // SEO
+    // SEO (9 checks)
     structured_data: 'seo',
     meta_description: 'seo',
     canonical_url: 'seo',
     robots_meta: 'seo',
     page_title: 'seo',
     headings_hierarchy: 'seo',
+    xml_sitemap: 'seo', // v3.1
+    twitter_cards: 'seo', // v3.1
+    hreflang: 'seo', // v3.1
     // Mobile
     viewport: 'mobile',
     media_queries: 'mobile',
@@ -228,29 +270,47 @@ function getCategoryForCheck(checkId: string): string {
     image_optimization: 'performance',
     fonts_loading: 'performance',
     resource_hints: 'performance',
-    // Security
+    // Security (3 checks)
     https: 'security',
-    // Analytics
+    csp: 'security', // v3.1
+    mixed_content: 'security', // v3.1
+    // Analytics (3 checks)
     google_analytics: 'analytics',
     google_tag_manager: 'analytics',
     facebook_pixel: 'analytics',
+    // Code Quality (2 checks) - v3.1
+    console_errors: 'quality',
+    broken_links: 'quality',
+    // Privacy (2 checks) - v3.1
+    cookie_consent: 'privacy',
+    privacy_policy: 'privacy',
   };
   return categoryMap[checkId] || 'seo';
 }
 
-// Execute checks and send results
-(async () => {
-  try {
-    const results = await runAllChecks();
-    chrome.runtime.sendMessage({
-      type: 'CHECK_COMPLETE',
-      data: results,
-    });
-  } catch (error) {
-    console.error('Failed to run checks:', error);
-    chrome.runtime.sendMessage({
-      type: 'CHECK_ERROR',
-      data: { error: String(error) },
-    });
+// Listen for message from popup to run checks
+chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message.type === 'RUN_CHECKS') {
+    logger.info('Received RUN_CHECKS message from popup', {}, 'content-script');
+    
+    runAllChecks()
+      .then((results) => {
+        chrome.runtime.sendMessage({
+          type: 'CHECK_COMPLETE',
+          data: results,
+        });
+        sendResponse({ success: true });
+      })
+      .catch((error) => {
+        logger.error('Failed to run checks', error, 'content-script');
+        console.error('Failed to run checks:', error);
+        chrome.runtime.sendMessage({
+          type: 'CHECK_ERROR',
+          data: { error: String(error) },
+        });
+        sendResponse({ success: false, error: String(error) });
+      });
+    
+    return true; // Keep the message channel open for async response
   }
-})();
+});

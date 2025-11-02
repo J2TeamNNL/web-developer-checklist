@@ -24,8 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@/components/*": ["src/popup/components/*"],
-      "@/hooks/*": ["src/popup/hooks/*"],
+      "@/components/*": ["src/app/components/*"],
+      "@/hooks/*": ["src/app/hooks/*"],
       "@/shared/*": ["src/shared/*"],
       "@/types/*": ["src/shared/types/*"],
       "@/utils/*": ["src/shared/utils/*"],

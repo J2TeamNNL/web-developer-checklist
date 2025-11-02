@@ -21,21 +21,180 @@ Phát triển lại tiện ích Chrome Extension **Web Developer Checklist** ph�
 
 ---
 
-## 📋 DANH SÁCH CÔNG VIỆC CẦN LÀM
+## 📋 DANH SÁCH CÔNG VIỆC ĐÃ HOÀN THÀNH ✅
 
-### 1. 🏗️ Core Infrastructure & Modern Architecture
+### Phase 1 & 2: Core Development (COMPLETED)
+- ✅ **Project Setup với TypeScript + Vite**
+- ✅ **Manifest V3 configuration** 
+- ✅ **27 Check Rules đã implement:**
+  - SEO (6): Structured Data, Meta Description, Canonical URL, Robots Meta, Page Title, Headings
+  - Mobile (4): Viewport, Media Queries, Touch Target Size, Text Readability
+  - Usability (2): Favicon, Friendly URLs
+  - Accessibility (5): Image Alt, Landmarks, ARIA Roles, Form Labels, Color Contrast
+  - Social (2): OpenGraph, iOS Integration
+  - Performance (4): DOM Size, Image Optimization, Fonts Loading, Resource Hints
+  - Security (1): HTTPS
+  - Analytics (3): Google Analytics, GTM, Facebook Pixel
+- ✅ **Theme System** (Light/Dark/Auto)
+- ✅ **i18n Support** (Vietnamese default, English, Auto detection)
+- ✅ **Progress Tracking** với realtime updates
+- ✅ **Debug Logger System** với chrome.storage
+- ✅ **Message-based Architecture** (content scripts)
+- ✅ **Production Build** (~147KB)
 
-#### 1.1 Project Setup & Structure
-- [ ] **Khởi tạo project với TypeScript**
-  - Tạo `package.json` với dependencies hiện đại
-  - Setup TypeScript config (`tsconfig.json`)
-  - Cấu hình path aliases cho import
-  
-- [ ] **Thiết lập cấu trúc thư mục module-based**
-  ```
-  src/
-  ├── manifest.json
-  ├── background/
+---
+
+## 🆕 CHECKS CẦN BỔ SUNG (Best Practices 2025)
+
+### 1. 🔒 Security (Priority: HIGH)
+- [ ] **Content Security Policy (CSP)** - Check for CSP headers
+- [ ] **X-Frame-Options** - Clickjacking protection
+- [ ] **X-Content-Type-Options** - MIME type sniffing protection
+- [ ] **HTTP Strict Transport Security (HSTS)** - Force HTTPS
+- [ ] **Subresource Integrity (SRI)** - Check for SRI on external scripts
+- [ ] **Permissions Policy** - Control browser features
+- [ ] **Mixed Content** - Check for HTTP resources on HTTPS pages
+
+### 2. ⚡ Performance (Priority: HIGH)
+- [ ] **Core Web Vitals** - LCP, FID, CLS, INP, TTFB
+- [ ] **WebP/AVIF Images** - Modern image formats
+- [ ] **Compression** - Check gzip/brotli encoding
+- [ ] **HTTP/2 or HTTP/3** - Modern protocols
+- [ ] **Service Worker** - Offline support
+- [ ] **Resource Bundling** - JS/CSS optimization
+- [ ] **Critical CSS** - Inline critical path CSS
+- [ ] **Render-blocking Resources** - Detect blocking scripts/styles
+
+### 3. 📱 PWA & Modern Web (Priority: MEDIUM)
+- [ ] **Web App Manifest** - PWA support
+- [ ] **Service Worker Registration**
+- [ ] **Offline Page** - Fallback for offline
+- [ ] **Push Notifications Support**
+- [ ] **Add to Home Screen** - A2HS criteria
+- [ ] **Theme Color** - Browser chrome customization
+
+### 4. 🔍 SEO & Crawlability (Priority: HIGH) 
+- [ ] **XML Sitemap** - Check for sitemap.xml
+- [ ] **Schema.org Validation** - Validate structured data
+- [ ] **Hreflang Tags** - Multi-language SEO
+- [ ] **Pagination Tags** - rel="prev"/"next"
+- [ ] **Twitter Cards** - Twitter metadata
+- [ ] **JSON-LD** - Structured data format
+- [ ] **Breadcrumbs** - Navigation schema
+
+### 5. ♿ Advanced Accessibility (Priority: HIGH)
+- [ ] **Keyboard Navigation** - Tab order & focus management
+- [ ] **Screen Reader Testing** - NVDA/JAWS compatibility
+- [ ] **Focus Indicators** - Visible focus states
+- [ ] **Skip Links** - Skip to main content
+- [ ] **Reduced Motion** - prefers-reduced-motion support
+- [ ] **High Contrast Mode** - Windows high contrast
+- [ ] **Text Spacing** - WCAG 2.1 1.4.12
+
+### 6. 🌐 Code Quality & Validation (Priority: MEDIUM)
+- [ ] **HTML5 Validation** - W3C validator
+- [ ] **CSS Validation** - CSS validator
+- [ ] **JavaScript Errors** - Console error detection
+- [ ] **Broken Links** - 404 detection
+- [ ] **Deprecated APIs** - Check for deprecated features
+- [ ] **ES Module Support** - Modern JS modules
+
+### 7. 🎯 Modern Web APIs (Priority: LOW)
+- [ ] **Web Share API** - Native sharing
+- [ ] **Payment Request API** - Web payments
+- [ ] **Web Authentication** - WebAuthn/Passkeys
+- [ ] **Permissions API** - Permission states
+- [ ] **Battery Status** - Battery API usage
+- [ ] **Network Information** - Connection type
+
+### 8. 📊 Analytics & Privacy (Priority: MEDIUM)
+- [ ] **Cookie Consent** - GDPR compliance
+- [ ] **Privacy Policy Link** - Check for privacy page
+- [ ] **Third-party Scripts** - List all trackers
+- [ ] **DNS Prefetching** - Privacy implications
+- [ ] **Referrer Policy** - Control referrer info
+
+### 9. 🎨 UI/UX Best Practices (Priority: MEDIUM)
+- [ ] **Dark Mode Support** - prefers-color-scheme
+- [ ] **Custom 404 Page** - Error page exists
+- [ ] **Search Functionality** - Site search
+- [ ] **Print Stylesheet** - Print-friendly CSS
+- [ ] **Loading States** - Skeleton screens/spinners
+- [ ] **Error Handling** - User-friendly errors
+
+### 10. 🔧 DevOps & Monitoring (Priority: LOW)
+- [ ] **robots.txt Validation** - Proper format
+- [ ] **humans.txt** - Team credits
+- [ ] **Security.txt** - Security contact info
+- [ ] **Status Page Link** - Service status
+- [ ] **Version Headers** - X-Version headers
+
+---
+
+## 📊 SUMMARY
+
+### Đã Hoàn Thành
+- ✅ **27/27 checks cơ bản** từ Phase 1 & 2
+- ✅ **8/8 categories** đã implement
+- ✅ **All core features** hoạt động
+
+### Cần Bổ Sung (Theo Best Practices 2025)
+- 🔴 **~70+ checks mới** cần thêm
+- 🔴 **Core Web Vitals** - Quan trọng cho SEO
+- 🔴 **Security headers** - Bảo mật hiện đại
+- 🔴 **PWA support** - Progressive Web Apps
+- 🔴 **Advanced accessibility** - WCAG 2.1 AA
+
+### Priority Order
+1. **Security & CSP checks** (Bảo mật)
+2. **Core Web Vitals** (Performance)
+3. **Advanced SEO** (XML Sitemap, Twitter Cards)
+4. **Accessibility WCAG 2.1** (Keyboard, Screen readers)
+5. **PWA & Modern APIs** (Optional)
+
+---
+
+## 🎯 V3.2 - FULL-PAGE APP UX OVERHAUL (In Progress)
+
+### Major Changes
+- [ ] **Bỏ Popup** - Chuyển sang Full-Page App
+- [ ] **Language Switcher** - Toggle VI/EN/Auto với notification
+- [ ] **Filter Button** - Show All / Incomplete Only
+- [ ] **Export to List** - Simple bullet list với Copy button
+- [ ] **Toast Notifications** - User feedback cho mọi actions
+
+### UI/UX Features
+- [ ] Click extension icon → Mở tab mới (không còn popup nhỏ)
+- [ ] Full-width layout (max-width: 1200px, centered)
+- [ ] Toolbar: Theme + Language + Filter + Export buttons
+- [ ] Giữ dropdown categories layout hiện tại
+- [ ] Toast notifications: top-right, auto-dismiss 3s
+
+### New Components
+- [ ] LanguageSwitcher.tsx - Toggle ngôn ngữ
+- [ ] FilterButton.tsx - Toggle filter
+- [ ] ExportPanel.tsx - Export danh sách + Copy
+- [ ] Toast.tsx - Notification system
+
+### New Hooks
+- [ ] useFilter.ts - Filter logic (hide PASS checks)
+- [ ] useExport.ts - Export to bullet list + Copy
+
+### Export Format
+```
+- Meta Description (FAIL)
+- Page Title (NA)
+- XML Sitemap (FAIL)
+```
+
+### i18n Keys Cần Thêm
+- language_switcher, filter_all, filter_incomplete
+- export_button, copy_button
+- toast_copied, toast_language_changed, toast_filter_toggled
+
+**Estimate:** 5-6 hours  
+**Status:** Planning → Implementation  
+**See:** V3.2_PLAN.md for detailed specs
   ├── content/
   ├── popup/
   ├── shared/

@@ -35,10 +35,8 @@ export function useTheme() {
   };
 
   const toggleTheme = () => {
-    // Cycle: light -> dark -> auto -> light
-    const themeOrder: Theme[] = ['light', 'dark', 'auto'];
-    const currentIndex = themeOrder.indexOf(theme);
-    const newTheme = themeOrder[(currentIndex + 1) % themeOrder.length];
+    // Toggle between light and dark only
+    const newTheme: Theme = theme === 'light' ? 'dark' : 'light';
     
     setTheme(newTheme);
     applyTheme(newTheme);

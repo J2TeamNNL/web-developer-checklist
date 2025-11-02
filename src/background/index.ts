@@ -19,14 +19,14 @@ chrome.runtime.onMessage.addListener((message, _sender, _sendResponse) => {
   return true;
 });
 
-// Handle extension icon click
-chrome.action.onClicked.addListener((tab) => {
-  if (tab.id) {
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      files: ['src/content/index.js'],
-    });
-  }
+// Handle extension icon click - open full-page app
+chrome.action.onClicked.addListener((_tab) => {
+  logger.info('Extension icon clicked - opening full-page app', {}, 'background');
+  
+  // Open full-page app in new tab
+  chrome.tabs.create({
+    url: chrome.runtime.getURL('index.html'),
+  });
 });
 
 console.log('Web Developer Checklist background service worker loaded');

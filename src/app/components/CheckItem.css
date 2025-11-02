@@ -87,11 +87,14 @@
 .check-link {
   display: inline-block;
   font-size: var(--font-size-sm);
-  color: var(--color-primary);
+  color: var(--color-info);
   text-decoration: none;
   margin-top: var(--spacing-sm);
+  font-weight: 500;
 }
 
 .check-link:hover {
   text-decoration: underline;
+  color: var(--color-primary-hover);
+  opacity: 0.9;
 }

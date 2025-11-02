@@ -20,7 +20,7 @@
     "description": "Progress bar text"
   },
   "footer_more_info": {
-    "message": "More info and help",
+    "message": "Inspired by",
     "description": "Footer link text"
   },
   "button_refresh": {
@@ -202,5 +202,81 @@
   "learn_more": {
     "message": "Learn more",
     "description": "Learn more link"
+  },
+  "category_quality": {
+    "message": "Code Quality",
+    "description": "Code Quality category"
+  },
+  "category_privacy": {
+    "message": "Privacy",
+    "description": "Privacy category"
+  },
+  "check_xml_sitemap": {
+    "message": "XML Sitemap",
+    "description": "XML Sitemap check"
+  },
+  "check_twitter_cards": {
+    "message": "Twitter Cards",
+    "description": "Twitter Cards check"
+  },
+  "check_hreflang": {
+    "message": "Hreflang Tags",
+    "description": "Hreflang tags check"
+  },
+  "check_csp": {
+    "message": "Content Security Policy",
+    "description": "CSP check"
+  },
+  "check_mixed_content": {
+    "message": "Mixed Content",
+    "description": "Mixed content check"
+  },
+  "check_console_errors": {
+    "message": "JavaScript Errors",
+    "description": "Console errors check"
+  },
+  "check_broken_links": {
+    "message": "Broken Links",
+    "description": "Broken links check"
+  },
+  "check_cookie_consent": {
+    "message": "Cookie Consent (GDPR)",
+    "description": "Cookie consent check"
+  },
+  "check_privacy_policy": {
+    "message": "Privacy Policy",
+    "description": "Privacy policy check"
+  },
+  "language_switcher": {
+    "message": "Language",
+    "description": "Language switcher"
+  },
+  "filter_all": {
+    "message": "Show All",
+    "description": "Show all checks"
+  },
+  "filter_incomplete": {
+    "message": "Incomplete Only",
+    "description": "Show incomplete only"
+  },
+  "export_button": {
+    "message": "Export to List",
+    "description": "Export button"
+  },
+  "copy_button": {
+    "message": "Copy to Clipboard",
+    "description": "Copy button"
+  },
+  "toast_copied": {
+    "message": "Copied to clipboard!",
+    "description": "Toast copied message"
+  },
+  "toast_language_changed": {
+    "message": "Language changed",
+    "description": "Toast language changed"
+  },
+  "toast_filter_toggled": {
+    "message": "Filter toggled",
+    "description": "Toast filter toggled"
   }
 }
